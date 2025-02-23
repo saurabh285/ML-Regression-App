@@ -17,6 +17,14 @@ st.markdown("""
     <h1 style='text-align: center; color: #3366ff;'>ML Regression Web App</h1>
     <hr style='border: 1px solid #ccc;'>
 """, unsafe_allow_html=True)
+with st.expander("📌 When Not to Use Regression Models"):
+            st.markdown("""
+            - When dealing with **classification problems** (e.g., predicting categories instead of continuous values).
+            - If the dataset has **highly non-linear relationships** that regression cannot capture well.
+            - When working with **unstructured data** like images, text, or audio.
+            - If the dataset has **high-dimensional sparse features**, tree-based models or deep learning might work better.
+            - For **time-series forecasting**, as regression models don’t inherently consider sequential dependencies.
+            """, unsafe_allow_html=True)
 
 # Function for Data Preprocessing
 def preprocess_data(df):
