@@ -10,11 +10,12 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
 
 # Set page config
-st.set_page_config(page_title="ML Regression Web App", page_icon="📊", layout="wide")
+st.set_page_config(page_title="ML Regressor Hub", page_icon="📊", layout="wide")
+
 
 # Title with styling
 st.markdown("""
-    <h1 style='text-align: center; color: #3366ff;'>ML Regression Web App</h1>
+    <h1 style='text-align: center; color: #3366ff;'>ML Regressor Hub</h1>
     <hr style='border: 1px solid #ccc;'>
 """, unsafe_allow_html=True)
 with st.expander("📌 When Not to Use Regression Models"):
@@ -25,7 +26,6 @@ with st.expander("📌 When Not to Use Regression Models"):
             - If the dataset has **high-dimensional sparse features**, tree-based models or deep learning might work better.
             - For **time-series forecasting**, as regression models don’t inherently consider sequential dependencies.
             """, unsafe_allow_html=True)
-
 # Function for Data Preprocessing
 def preprocess_data(df):
     df.fillna(df.median(numeric_only=True), inplace=True)
